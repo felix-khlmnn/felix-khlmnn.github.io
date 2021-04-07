@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(53, 53, 53);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+}
+
+.header {
+    color: white;
+    font-size: 52px;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    display: block;
+    letter-spacing: 7.5px;
+    cursor: pointer;
+}
+
+.side-navbar {
+    position: absolute;
+    border-right: 3px solid grey;
+    display: block;
+    background-color: rgb(70, 70, 70);
+    padding: 10px;
+    min-width: 20%;
+    min-height: 96%;
+    text-align: right;
+    margin: 0;
+}
+
+.side-navbar-button {
+    border: 1px solid grey;
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+}
+
+.side-navbar-button:hover {
+    animation-name: buttonLightUp;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes buttonLightUp {
+    from {
+        background-color: rgb(100, 100, 100);
+    }
+    to {
+        background-color: rgb(150, 150, 150);
+    }
+}
+
+.side-navbar-text {
+    color: white;
+    font-size: 25px;
+    margin: 0px 0px 10px;
+    
+    letter-spacing: 5px;
+}
+
+.content {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    display: inline-block;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-right: 5%;
+    padding: 0px;
+}
+.content-header {
+    font-size: 25px;
+    margin: 10px 0px -7.5px;
+}
