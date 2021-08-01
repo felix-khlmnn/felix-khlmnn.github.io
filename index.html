@@ -13,7 +13,8 @@
                     const urlSearchParams = new URLSearchParams(window.location.search);
                     const params = Object.fromEntries(urlSearchParams.entries());
                     if (allowedIPs[i] == reqIP && params.target) {
-                        window.open(`https://dixi18.github.io/static/web/${params.target}`, "_self")
+                        document.write('var navbar=document.getElementById("navbar"),navbarButton=document.getElementById("navbar-button"),slideState=!0,listElHeight=document.getElementsByClassName("active")[0].offsetHeight;function slideNavbar(){(slideState=!slideState)?(navbar.classList.remove("not-extended"),navbarButton.style.setProperty("--button-background-color","#f1f1f1")):(navbar.classList.add("not-extended"),navbarButton.style.setProperty("--button-background-color","rgba(241, 241, 241, 0)"))}navbarButton.style.width=listElHeight+1,navbarButton.style.height=listElHeight,navbarButton.style.setProperty("--translation",`${listElHeight-.5}px`),navbarButton.style.setProperty("--button-background-color","#f1f1f1");')
+                        //window.open(`https://dixi18.github.io/static/web/${params.target}`, "_self")
                     } else {
                         document.write("403");
                     }
