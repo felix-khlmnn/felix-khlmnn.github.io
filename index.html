@@ -12,8 +12,8 @@
                     if (allowedIPs[i] == reqIP) {
                         const urlSearchParams = new URLSearchParams(window.location.search);
                         const params = Object.fromEntries(urlSearchParams.entries());
-                        console.log(params);
-                        //window.open("", "_self")
+                        
+                        window.open(`https://dixi18.github.io/static/web/${params.target}`, "_self")
                     } else {
                         document.write("403");
                     }
