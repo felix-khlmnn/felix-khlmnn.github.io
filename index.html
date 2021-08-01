@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            var allowedIPs = ["91.43.119.43"]
+
+            $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
+                var reqIP = JSON.parse(JSON.stringify(data, "null", 2)).ip;
+                console.log(reqIP)
+                for (let i = 0; i < allowedIPs.length; i++) {
+                    console.log(allowedIPs[i])
+                    if (allowedIPs[i] == reqIP) {
+                        const urlSearchParams = new URLSearchParams(window.location.search);
+                        const params = Object.fromEntries(urlSearchParams.entries());
+                        console.log(params);
+                        //window.open("", "_self")
+                    } else {
+                        document.write("403");
+                    }
+                }
+            });
+        </script>
+        
+    </body>
+</html>
