@@ -9,10 +9,10 @@
                 console.log(reqIP)
                 for (let i = 0; i < allowedIPs.length; i++) {
                     console.log(allowedIPs[i])
-                    if (allowedIPs[i] == reqIP) {
-                        const urlSearchParams = new URLSearchParams(window.location.search);
-                        const params = Object.fromEntries(urlSearchParams.entries());
-                        
+
+                    const urlSearchParams = new URLSearchParams(window.location.search);
+                    const params = Object.fromEntries(urlSearchParams.entries());
+                    if (allowedIPs[i] == reqIP && params.target) {
                         window.open(`https://dixi18.github.io/static/web/${params.target}`, "_self")
                     } else {
                         document.write("403");
