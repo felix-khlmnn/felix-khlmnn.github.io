@@ -1,6 +1,12 @@
+html {
+    --davys-grey: #50514fff;
+    --terra-cotta: #ed6a5aff;
+    --lavender-blush: #f0e2e7ff;
+    --magic-mint: #99edccff;
+}
+
 body {
-    background-color: rgba(66, 36, 75, 1);
-    background: linear-gradient(180deg, rgba(66, 36, 75, 1), rgba(56, 35, 63, 1));
+    background-color: var(--davys-grey);
 }
 div.heading-container {
     position: relative;
@@ -11,22 +17,30 @@ div.heading-container {
     text-align: center;
     padding: 1px;
 }
+div.heading-container * {
+    color: var(--lavender-blush);
+}
 .container {
     column-count: 2;
-    column-width: 250px;
+    column-width: 150px;
     column-gap: 20px;
 }
 .card {
-    background-color: beige;
+    background-color: var(--magic-mint);
     border: 2px solid black;
+    border-radius: 5px;
     padding: 10px;
-    margin: 0 0 1em 0;
+    break-inside: avoid-column;
+    margin: 5px;
+}
+.card * {
+    margin: 0;
+    color: var(--davys-grey);
 }
 a {
     text-decoration: none;
 }
 h1, h2, p {
-    color: azure;
     font-family: Merriweather, serif;
 }
 h1, h2 {

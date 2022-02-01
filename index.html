@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
     <head>
         <title>Project log of Felix K.</title>
@@ -14,7 +16,7 @@
         <div class="heading-container">
             <a href="./index.html"><h1>Project log of Felix K.</h1></a>
         </div>
-        <div class="container">
+        <div class="container" id="cardHolder">
             
             <!--<template id="card-template" name="card-template">
                 <div class="card">
@@ -22,20 +24,30 @@
                     <p></p>
                 </div>
             </template> -->
-        </div>
 
-        <script>
+        <script name="cardGenerator">
+            //generates the cards
+            var appendableText = "";
+            var cardHolder = document.getElementById("cardHolder");
             fetch("https://api.github.com/users/Dixi18/repos")
             .then(response => response.json())
             .then(data => {
                 for (var i = 0; i < data.length; i++) {
-                    console.log(data[i].name);
+                    if(data[i].name == "Dixi18") continue; //Keine Eigenwerbung
+                    createCard(data[i].name, data[i].description);
                 }
-            })
+            }).then(() => {
+                cardHolder.innerHTML = appendableText;
+            });
 
             function createCard(name, description) {
                 //Schaffe eine Karte mit dem oben geschaffenen Template
+                appendableText += `<div class="card">
+                    <a href="./${name}"><h2>${name}</h2></a>
+                    <p>${description}</p>
+                    </div>`
             }
         </script>
+        </div>
     </body>
 </html>
