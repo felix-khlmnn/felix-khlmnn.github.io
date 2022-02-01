@@ -1,0 +1,38 @@
+body {
+    background-color: rgba(66, 36, 75, 1);
+    background: linear-gradient(180deg, rgba(66, 36, 75, 1), rgba(56, 35, 63, 1));
+}
+div.heading-container {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform:translateX(-50%);
+
+    text-align: center;
+    padding: 1px;
+}
+.container {
+    column-count: 2;
+    column-width: 250px;
+    column-gap: 20px;
+}
+.card {
+    background-color: beige;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0 0 1em 0;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, p {
+    color: azure;
+    font-family: Merriweather, serif;
+}
+h1, h2 {
+    font-weight: 400;
+    font-size: 40px
+}
+p {
+    font-weight: 300;
+}

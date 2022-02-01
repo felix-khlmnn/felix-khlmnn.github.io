@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Project log of Felix K.</title>
+        <meta charset="utf8" >
+        <link rel="stylesheet" href="style.css" >
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="heading-container">
+            <a href="./index.html"><h1>Project log of Felix K.</h1></a>
+        </div>
+        <div class="container">
+            
+            <!--<template id="card-template" name="card-template">
+                <div class="card">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </template> -->
+        </div>
+
+        <script>
+            fetch("https://api.github.com/users/Dixi18/repos")
+            .then(response => response.json())
+            .then(data => {
+                for (var i = 0; i < data.length; i++) {
+                    console.log(data[i].name);
+                }
+            })
+
+            function createCard(name, description) {
+                //Schaffe eine Karte mit dem oben geschaffenen Template
+            }
+        </script>
+    </body>
+</html>
