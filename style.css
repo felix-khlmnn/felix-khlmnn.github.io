@@ -2,9 +2,10 @@
 
 html {
     --davys-grey: #50514fff;
-    --terra-cotta: #ed6a5aff;
     --lavender-blush: #f0e2e7ff;
     --magic-mint: #99edccff;
+    --tuscan-red: #7d4e57ff;
+    --card-font: #3f3f3fff;
 }
 
 body {
@@ -20,7 +21,7 @@ div.heading-container {
     padding: 1px;
 }
 div.heading-container * {
-    color: var(--lavender-blush);
+    color: white;
 }
 .container {
     column-count: 2;
@@ -28,8 +29,8 @@ div.heading-container * {
     column-gap: 20px;
 }
 .card {
-    background-color: var(--magic-mint);
-    border: 2px solid black;
+    background-color: var(--tuscan-red);
+    border: 2px solid white;
     border-radius: 5px;
     padding: 10px;
     break-inside: avoid-column;
@@ -37,7 +38,7 @@ div.heading-container * {
 }
 .card * {
     margin: 0;
-    color: var(--davys-grey);
+    color: var(--card-font);
 }
 a {
     text-decoration: none;
