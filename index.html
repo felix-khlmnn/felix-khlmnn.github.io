@@ -33,7 +33,7 @@
             .then(response => response.json())
             .then(data => {
                 for (var i = 0; i < data.length; i++) {
-                    if(data[i].name == "Dixi18") continue; //Keine Eigenwerbung
+                    if(data[i].name == "felix-khlmnn") continue; //Ausschluss des Config-Repos
                     createCard(data[i].name, data[i].description);
                 }
             }).then(() => {
@@ -43,7 +43,7 @@
             function createCard(name, description) {
                 //Schaffe eine Karte mit dem oben geschaffenen Template
                 appendableText += `<div class="card">
-                    <a href="./${name}"><h2>${name}</h2></a>
+                    <a href="https://www.github.com/felix-khlmnn/${name}"><h2>${name}</h2></a>
                     <p>${description}</p>
                     </div>`
             }
