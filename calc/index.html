@@ -1,1 +1,34 @@
-test
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calc - Project log of Felix K.</title>
+        <meta charset="utf8" >
+        <link rel="stylesheet" href="../style.css" >
+        
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="heading-container">
+            <a href="../index.html"><h1>Project log of Felix K.</h1></a>
+        </div>
+        <div markdown="1">
+            <div id="description-container">
+            </div>
+        </div>
+
+        <script name="README reader">
+            var descriptionContainer = document.getElementById("description-container");
+            var readmeContent = "";
+
+            fetch("https://raw.githubusercontent.com/felix-khlmnn/calc/master/README.md")
+            .then(response => response.text())
+            .then(result => {
+                descriptionContainer.innerHTML = result;
+            });
+        </script>
+    </body>
+</html>
