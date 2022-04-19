@@ -15,12 +15,33 @@
         <div class="heading-container">
             <a href="../index.html"><h1>Project log of Felix K.</h1></a>
         </div>
-        <div markdown="1">
-            <div id="description-container">
-            </div>
+        <div id="description">
+            <h1>Calc</h1><a href="https://github.com/felix-khlmnn/calc" class="visible-link">Link to repository</a>
+            
+            <p>This is just a small calculator that you can use in your command line.</p>
+            <p>It's simple to use and without any unnecessary additions.</p>
+            <h2>Installation</h2>
+            <p>First, you have to compile the source code by executing the following command:</p>
+            <code class="not-inline">g++ -o calc calc.cpp</code>
+            <p>Once your <code>calc</code> executable is compiled, you can run it either by running <code>./calc</code> in the folder of the executable or by adding it to the corresponding binary locations.</p>
+
+            <p>One example of this would be running the following command:</p>
+            <code class="not-inline">sudo cp path/to/calc /usr/local/bin/calc</code>
+            <p>This adds the <code>calc</code> executable to the <code>$PATH</code> of the user, making it accesible in any shell by simply calling <code>calc</code>.</p>
+            <h2>Usage</h2>
+            <p>As I wrote in the beginning, this little calculator isn't anything fancy.</p>
+            <p>After starting the applicaton, you can start writing operations.</p>
+            <p><em>Limitations</em></p>
+            <ul>
+                <li><p>As of right now, operations can only include <em>one</em> operator.</p></li>
+                <li><p>The operators +, -, *, /, % and ^ are the only valid operators</p></li>
+            </ul>
+            <p>Answers can be carried over by writing <code>ans</code> in any part of the operation.</p>
+            
+            <p>If you detect any issues, please post an issue.</p>
         </div>
 
-        <script name="README reader">
+        <!--<script name="README reader">
             var descriptionContainer = document.getElementById("description-container");
             var readmeContent = "";
 
@@ -29,6 +50,6 @@
             .then(result => {
                 descriptionContainer.innerHTML = result;
             });
-        </script>
+        </script>-->
     </body>
 </html>
