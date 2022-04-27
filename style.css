@@ -43,11 +43,11 @@ div.heading-container * {
 a.visible-link {
     text-decoration: underline;
 }
-h1, h2, p, code, a {
+h1, h2, p, code, a, pre {
     color: white;
     text-decoration: none;
 }
-h1, h2, p {
+h1, h2, p, a, pre {
     font-family: Merriweather, serif;
 }
 h1, h2 {
@@ -62,6 +62,8 @@ h2 {
 p {
     font-weight: 300;
 }
+
+
 code {
     font-size: 15px;
     background-color: darkgray;
@@ -71,4 +73,76 @@ code {
 code.not-inline {
     margin: 10px 50px;
     padding: 10px 5px;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.navbar-element {
+    float: left;
+}
+li.navbar-element a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.navbar-element a:hover {
+    animation-name: navbar-element-hover-anim;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes navbar-element-hover-anim {
+    from {background-color: none;}
+    to {background-color: #111;}
+}
+li.navbar-element a:active {
+    background-color: var(--tuscan-red);
+}
+
+div.tree-container {
+    background-color: #333;
+    display: block;
+    width: fit-content;
+    margin: 0;
+    padding: 10px 5px;
+}
+div.tree-container h2 {
+    margin: 10px 40px;
+}
+ul.tree-holder {
+    list-style-type: none;
+}
+ul.tree-holder ul {
+    list-style-type: none;
+}
+ul.tree-holder * {
+    font-family: Merriweather, serif;
+    margin: 5px 10px;
+    color: white;
+}
+a.tree-file:hover {
+    text-decoration: underline;
+    animation: underline-blend-in 0.5s both;
+    cursor: pointer;
+}
+@keyframes underline-blend-in {
+    from {text-decoration-color: transparent;}
+    to {text-decoration-color: white;}
+}
+
+div.text-container {
+    background-color: #333;
+    margin: 10px 0px;
+    padding: 15px 10px;
+}
+pre.text-holder {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-x: hidden;
 }

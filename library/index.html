@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Library</title>
+        <meta charset="utf8" >
+        <link rel="stylesheet" href="../style.css" >
+        
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="navbar-container">
+            <ul class="navbar">
+                <li class="navbar-element"><a href="https://felix-khlmnn.github.io">Home</a></li>
+                <li class="navbar-element"><a href="https://github.com/felix-khlmnn">GitHub Profile</a></li>
+                <li class="navbar-element"><a href="./library">Library</a></li>
+            </ul>
+        </div>
+        <div class="heading-container">
+            <h1>Library</h1>
+        </div>
+        <div class="tree-container">
+            <h2>Contents:</h2>
+            <ul id="tree-holder" class="tree-holder"><!--JavaScript adds the contents-->
+            </ul>
+        </div>
+        <div class="text-container" id="text-container">
+            <pre id="text-holder">
+                Select one of the library's files to display them here.
+                <!--JavaScript adds the contents-->
+            </pre>
+        </div>
+        <script>
+            displayFileTree();
+        </script>
+    </body>
+</html>
