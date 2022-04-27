@@ -1,2 +1,3 @@
-bash-dafaults 
-#temporary, my dotfiles aren'T accessible
+bash-defaults 
+#temporary, my dotfiles aren't accessible
+.vscode
