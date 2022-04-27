@@ -140,6 +140,7 @@ div.text-container {
     background-color: #333;
     margin: 10px 0px;
     padding: 15px 10px;
+    line-height: 1.5;
 }
 pre.text-holder {
     word-wrap: break-word;
