@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html>  
     <head>
         <title>Project log of Felix K.</title>
         <meta charset="utf8" >
@@ -9,8 +9,7 @@
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="navbar-container">
@@ -23,6 +22,7 @@
         <div class="heading-container">
             <h1>Project log of Felix K.</h1>
         </div>
+        <p>This is a collection of all the projects I've been working on.</p>
         <div class="container" id="cardHolder">
             
             <!--<template id="card-template" name="card-template">
@@ -48,6 +48,9 @@
             });
 
             function createCard(name, description) {
+                if (description == null) { //Entfernen einer fehlenden Beschreibung
+                    description = "";
+                }
                 //Schaffe eine Karte mit dem oben geschaffenen Template
                 appendableText += `<a href="https://www.github.com/felix-khlmnn/${name}"><div class="card">
                     <h2>${name}</h2>

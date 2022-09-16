@@ -1,15 +1,5 @@
-/*https://coolors.co/50514f-ed6a5a-f0e2e7-99edcc*/
-
-html {
-    --davys-grey: #50514fff;
-    --lavender-blush: #f0e2e7ff;
-    --magic-mint: #99edccff;
-    --tuscan-red: #7d4e57ff;
-    --card-font: #3f3f3fff;
-}
-
 body {
-    background-color: var(--davys-grey);
+    background-color: #242434;
 }
 div.heading-container {
     position: relative;
@@ -29,16 +19,28 @@ div.heading-container * {
     column-gap: 20px;
 }
 .card {
-    background-color: var(--tuscan-red);
-    border: 2px solid white;
+    border: 1px solid #454545;
     border-radius: 5px;
     padding: 10px;
     break-inside: avoid-column;
     margin: 0px 5px 15px;
+    box-shadow: -7.5px 0px #ffffff;
+}
+.card:hover {
+    animation: card-animate 0.25s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes card-animate {
+    from {  box-shadow: -7.5px 0px #ffffff;
+            text-shadow: none;}
+    to {    box-shadow: -7.5px 0px #ffffff,
+                        0px 0px 15px 10px #ffffff77,
+                        0px 0px 5px #ffffff;
+            text-shadow: 0px 0px 5px #ffffff;}
 }
 .card * {
     margin: 0;
-    color: var(--card-font);
+    color: white;
 }
 a.visible-link {
     text-decoration: underline;
@@ -48,21 +50,17 @@ h1, h2, p, code, a, pre {
     text-decoration: none;
 }
 h1, h2, p, a, pre {
-    font-family: Merriweather, serif;
-}
-h1, h2 {
-    font-weight: 400;
+    font-family: 'Didact Gothic', sans-serif
 }
 h1 {
-    font-size: 40px;
+    font-size: 2.75em;
 }
 h2 {
-    font-size: 30px;
+    font-size: 2em;
 }
 p {
-    font-weight: 300;
+    font-size: 1.25em;
 }
-
 
 code {
     font-size: 15px;
@@ -80,7 +78,8 @@ ul.navbar {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    border-top: 1px solid #454545;
+    border-bottom: 1px solid #454545;
 }
 li.navbar-element {
     float: left;
@@ -98,8 +97,10 @@ li.navbar-element a:hover {
     animation-fill-mode: forwards;
 }
 @keyframes navbar-element-hover-anim {
-    from {background-color: none;}
-    to {background-color: #111;}
+    from {  background-color: none;
+            text-shadow: none;}
+    to {    background-color: #111111;
+            text-shadow: 0px 0px 5px #ffffff}
 }
 li.navbar-element a:active {
     background-color: var(--tuscan-red);
